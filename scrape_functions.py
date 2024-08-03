@@ -36,7 +36,7 @@ def get_lyrics(
 ):
     song = urlopen(song_url)
     soup = BeautifulSoup(song.read(), "html.parser")
-    lyrics = soup.find_all("div")[20].get_text()
+    lyrics = soup.find_all("div")[24].get_text()
     title = soup.find_all("b")[1].get_text().replace('"', '')
     file_title = title.replace(" ", "_")
     album = soup.find_all(class_="songinalbum_title")
